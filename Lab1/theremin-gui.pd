@@ -1,0 +1,55 @@
+#N canvas 34 70 546 424 12;
+#N canvas 660 173 808 697 theremin 1;
+#X obj 68 553 *~;
+#X floatatom 193 404 5 0 0 0 - - -;
+#X floatatom 194 474 5 0 0 0 - - -;
+#X obj 181 534 vline~;
+#X floatatom 90 75 5 0 0 0 - - -;
+#X obj 67 501 osc~;
+#X obj 69 439 mtof~;
+#X obj 111 201 osc~;
+#X obj 112 354 *~;
+#X obj 72 384 +~;
+#X text 216 244 Amplitude of the theremin (usually left hand);
+#X text 209 91 Vibrato control.;
+#X text 158 50 Pitch of the theremin (usually right hand);
+#X obj 178 441 dbtorms;
+#X text 250 498 The vline generate linear ramp which level and timing
+are determined by message. In this case the level is value coming from
+the conversation from db to rms and the timing is 200ms.;
+#X text 217 166 Vibrato: the vibrato is a modulation of the frequenc
+;
+#X text 281 376 Root mean square values (rms) \, are logarithmic values
+between 0 and 1 \, where 0 corresponds to 0 dB and 1 to 100 dB.;
+#X msg 183 500 \$1 30;
+#X obj 69 615 dac~;
+#X obj 70 33 r pitch;
+#X obj 110 147 r pitch_v;
+#X obj 177 364 r amp;
+#X obj 164 275 r amp_v;
+#X connect 0 0 18 0;
+#X connect 0 0 18 1;
+#X connect 3 0 0 1;
+#X connect 5 0 0 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 1;
+#X connect 9 0 6 0;
+#X connect 13 0 2 0;
+#X connect 13 0 17 0;
+#X connect 17 0 3 0;
+#X connect 19 0 9 0;
+#X connect 19 0 4 0;
+#X connect 20 0 7 0;
+#X connect 21 0 13 0;
+#X connect 22 0 8 1;
+#X restore 359 325 pd theremin;
+#X obj 338 159 vsl 20 128 0 127 0 0 amp empty Amp 0 -9 0 12 -128992
+-1 -1 2600 1;
+#X obj 385 160 vsl 20 128 0 2 0 0 amp_v empty Amp_V 0 -9 0 12 -128992
+-1 -1 1600 1;
+#X obj 148 248 hsl 128 20 0 5 0 0 pitch_v empty Pitch_vibrato -2 -8
+0 12 -258113 -1 -1 300 1;
+#X obj 150 177 hsl 128 20 21 108 0 0 pitch empty Pitch -2 -8 0 12 -258113
+-1 -1 1100 1;
+#X coords 0 -1 1 1 350 250 1 100 100;
