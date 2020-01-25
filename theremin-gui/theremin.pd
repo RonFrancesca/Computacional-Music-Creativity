@@ -1,0 +1,76 @@
+#N canvas 34 70 546 424 12;
+#N canvas 608 268 808 697 theremin 0;
+#X obj 68 553 *~;
+#X obj 181 534 vline~;
+#X obj 67 501 osc~;
+#X obj 69 439 mtof~;
+#X obj 111 201 osc~;
+#X obj 112 354 *~;
+#X obj 72 384 +~;
+#X text 216 244 Amplitude of the theremin (usually left hand);
+#X text 209 91 Vibrato control.;
+#X text 158 50 Pitch of the theremin (usually right hand);
+#X obj 178 441 dbtorms;
+#X text 250 498 The vline generate linear ramp which level and timing
+are determined by message. In this case the level is value coming from
+the conversation from db to rms and the timing is 200ms.;
+#X text 217 166 Vibrato: the vibrato is a modulation of the frequenc
+;
+#X text 281 376 Root mean square values (rms) \, are logarithmic values
+between 0 and 1 \, where 0 corresponds to 0 dB and 1 to 100 dB.;
+#X msg 183 500 \$1 30;
+#X obj 69 615 dac~;
+#X obj 70 33 r pitch;
+#X obj 110 147 r pitch_v;
+#X obj 177 364 r amp;
+#X obj 164 275 r amp_v;
+#X connect 0 0 15 0;
+#X connect 0 0 15 1;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 6 0 3 0;
+#X connect 10 0 14 0;
+#X connect 14 0 1 0;
+#X connect 16 0 6 0;
+#X connect 17 0 4 0;
+#X connect 18 0 10 0;
+#X connect 19 0 5 1;
+#X restore 359 325 pd theremin;
+#X obj 296 161 vsl 20 128 0 127 0 0 amp amp_c Amp 0 -9 0 12 -128992
+-1 -1 0 1;
+#X obj 365 161 vsl 20 128 0 2 0 0 amp_v amp_v_c Amp_V 0 -9 0 12 -128992
+-1 -1 0 1;
+#X obj 123 254 hsl 128 20 0 5 0 0 pitch_v pitch_v_c Pitch_vibrato -2
+-8 0 12 -258113 -1 -1 0 1;
+#X obj 125 183 hsl 128 20 21 108 0 0 pitch pitch_c Pitch -2 -8 0 12
+-258113 -1 -1 0 1;
+#N canvas 1120 84 450 385 control 0;
+#X obj 46 46 ctlin 1;
+#X obj 137 47 ctlin 2;
+#X obj 221 47 ctlin 3;
+#X obj 305 49 ctlin 4;
+#X floatatom 65 72 5 0 0 0 - - -;
+#X floatatom 150 73 5 0 0 0 - - -;
+#X floatatom 239 70 5 0 0 0 - - -;
+#X floatatom 334 72 5 0 0 0 - - -;
+#X obj 305 92 / 31.75;
+#X obj 136 96 / 12.7;
+#X obj 48 98 s pitch_c;
+#X obj 133 131 s pitch_v_c;
+#X obj 222 107 s amp_c;
+#X obj 304 130 s amp_v_c;
+#X connect 0 0 4 0;
+#X connect 0 0 10 0;
+#X connect 1 0 5 0;
+#X connect 1 0 9 0;
+#X connect 2 0 6 0;
+#X connect 2 0 12 0;
+#X connect 3 0 7 0;
+#X connect 3 0 8 0;
+#X connect 8 0 13 0;
+#X connect 9 0 11 0;
+#X restore 359 294 pd control;
+#X coords 0 -1 1 1 350 250 2 100 100;
