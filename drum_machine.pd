@@ -1,0 +1,14 @@
+#N canvas 525 176 1090 643 12;
+#X declare -path ./abstraction;
+#X floatatom 765 100 5 0 0 0 - - -;
+#X obj 633 53 tgl 23 0 seq_bang empty Start/Stop -90 12 0 13 -191407
+-1 -1 0 1;
+#X obj 21 301 mixer;
+#X obj 772 600 declare -path ./abstraction;
+#X obj 678 29 bpm_to_s;
+#X obj 584 161 sequencer;
+#X obj 10 18 bass_drum;
+#X obj 9 58 snare;
+#X obj 9 98 cp;
+#X obj 10 142 cr;
+#X connect 4 0 0 0;
