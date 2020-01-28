@@ -1,0 +1,81 @@
+#N canvas 123 83 1311 713 12;
+#X obj 143 150 gain;
+#X obj 303 592 *~;
+#X obj 471 669 dac~;
+#X obj 837 148 gain;
+#X obj 1066 49 sig~ 1;
+#X obj 219 151 gain;
+#X obj 142 310 pan;
+#X obj 702 593 *~;
+#X obj 218 310 pan;
+#X obj 24 52 catch~ bd_vol;
+#X obj 147 49 catch~ sd_vol;
+#X obj 297 150 gain;
+#X obj 272 49 catch~ cp_vol;
+#X obj 296 310 pan;
+#X obj 375 148 gain;
+#X obj 375 309 pan;
+#X obj 452 148 gain;
+#X obj 452 308 pan;
+#X obj 510 48 catch~ lt_vol;
+#X obj 526 148 gain;
+#X obj 525 306 pan;
+#X obj 634 48 catch~ ht_vol;
+#X obj 389 48 catch~ oh_vol;
+#X obj 598 148 gain;
+#X obj 597 307 pan;
+#X obj 669 147 gain;
+#X obj 669 307 pan;
+#X obj 751 48 catch~ hh_vol;
+#X obj 887 48 catch~ mt_vol;
+#X text 906 183 The mixer is going to take as inout all the different
+signals \, giving them as input to gain and pan in order to be hanlded
+properly. As you will se \, the pan as two output \, one for the rigth
+channel and one for the left channel. Both are gonna be moltiply for
+the master volume \, which input is a sign 1 in order to keep working
+always.;
+#X text 845 545 I agree that the right and left channel could have
+been treated differently \, for example splitting the signal already
+inside the instrument. I did not want to do it because I believe it
+is better to create different patch for different function and also
+ebcasue I migth need this patch in the future so it would be easier
+to re-use the patch.;
+#X text 857 405 comment;
+#X connect 0 0 6 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 1;
+#X connect 3 0 7 1;
+#X connect 4 0 3 0;
+#X connect 5 0 8 0;
+#X connect 6 0 1 0;
+#X connect 6 1 7 0;
+#X connect 7 0 2 1;
+#X connect 8 0 1 0;
+#X connect 8 1 7 0;
+#X connect 9 0 0 0;
+#X connect 10 0 5 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 1 0;
+#X connect 13 1 7 0;
+#X connect 14 0 15 0;
+#X connect 15 0 1 0;
+#X connect 15 1 7 0;
+#X connect 16 0 17 0;
+#X connect 17 0 1 0;
+#X connect 17 1 7 0;
+#X connect 18 0 16 0;
+#X connect 19 0 20 0;
+#X connect 20 0 1 0;
+#X connect 20 1 7 0;
+#X connect 21 0 19 0;
+#X connect 22 0 14 0;
+#X connect 23 0 24 0;
+#X connect 24 0 1 0;
+#X connect 24 1 7 0;
+#X connect 25 0 26 0;
+#X connect 26 0 1 0;
+#X connect 26 1 7 0;
+#X connect 27 0 23 0;
+#X connect 28 0 25 0;
+#X coords 0 -1 1 1 800 250 2 100 100;

@@ -1,0 +1,24 @@
+#N canvas 329 289 945 637 12;
+#X msg 112 215 60000;
+#X floatatom 135 282 5 0 0 0 - - -;
+#X obj 112 249 /;
+#X obj 109 309 / 4;
+#X text 198 170 Bpm to seconds. This is going to convert the bmp (given
+as input to the trigger) to ms \, set as the new value of the metro.
+The input is given to a trigger \, which \, since is working from right-to-left
+\, it is going to first store the bpm to the / operator \, and afterwards
+\, to bang the 60000 value to the divisor operator;
+#X obj 113 174 t b f;
+#X floatatom 114 119 5 0 0 1 Bpm - -;
+#X obj 108 355 s ms;
+#X text 191 293 Diving the bpm value in ms by 4 \, in order to have
+the sequencer triggered every sub-beat.;
+#X text 164 356 comment;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 5 0 0 0;
+#X connect 5 1 2 1;
+#X connect 6 0 5 0;
+#X coords 0 -1 1 1 85 60 2 100 100;
