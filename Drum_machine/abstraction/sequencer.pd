@@ -1,0 +1,35 @@
+#N canvas 110 204 1196 730 12;
+#X obj 504 152 + 1;
+#X obj 15 10 hradio 25 1 0 8 empty empty empty 0 -8 0 10 -258113 -1
+-66577 4;
+#X obj 432 153 int 1;
+#X obj 432 176 mod 8;
+#X obj 432 103 t b;
+#X obj 16 80 s step;
+#X obj 433 59 metro 500;
+#X obj 518 16 r ms;
+#X obj 434 16 r seq_bang;
+#X obj 355 112 int 0;
+#X obj 254 12 bng 23 250 50 0 empty empty Reset 30 11 0 13 -191407
+-1 -1;
+#X text 550 148 Implementation of a counter. The output of the counter
+is also the input of the mod operator \, which is going to make the
+sequencer start again from the step 0 every 8 steps. the sequencer
+can also be reseted from the reset bang.;
+#X text 565 21 The sequencer object receive two values \, both feeding
+the metro. One is the bamg received from the strat and stop button
+and the second one is the values in ms in order to count the steps
+in a prepr way.;
+#X text 12 117 comment;
+#X connect 0 0 2 1;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 1;
+#X connect 8 0 6 0;
+#X connect 9 0 2 0;
+#X connect 10 0 9 0;
+#X coords 0 -1 1 1 350 50 2 0 0;

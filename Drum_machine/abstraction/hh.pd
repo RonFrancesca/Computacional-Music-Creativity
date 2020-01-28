@@ -1,0 +1,85 @@
+#N canvas 257 139 1052 704 12;
+#N canvas 0 23 450 278 (subpatch) 0;
+#X array hh 6888 float 2;
+#X coords 0 1 6888 -1 200 140 1 0 0;
+#X restore 16 498 graph;
+#X obj 18 410 soundfiler;
+#X floatatom 18 443 0 0 0 0 - - -;
+#X obj 85 447 print;
+#X obj 646 134 select 0 1 2 3 4 5 6 7;
+#X obj 432 328 spigot;
+#X obj 488 327 spigot;
+#X obj 549 326 spigot;
+#X obj 604 323 spigot;
+#X obj 658 322 spigot;
+#X obj 713 319 spigot;
+#X obj 763 319 spigot;
+#X obj 813 318 spigot;
+#X obj 386 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 644 80 r step;
+#X floatatom 680 103 5 0 0 0 - - -;
+#X obj 356 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 326 106 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 296 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 266 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 235 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 206 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 176 107 tgl 23 0 empty empty empty 17 7 0 10 -261234 -1 -1 0
+1;
+#X obj 630 496 tabplay~ hh;
+#X obj 630 519 throw~ hh_vol;
+#X obj 20 58 loadbang;
+#X obj 20 167 select 1 2 3 4;
+#X floatatom 132 110 5 1 4 0 - - -;
+#X msg 18 236 read -resize ../909-samples/hh01.wav hh;
+#X msg 39 284 read -resize ../909-samples/hh02.wav hh;
+#X msg 69 314 read -resize ../909-samples/hh03.wav hh;
+#X msg 109 348 read -resize ../909-samples/hh04.wav hh;
+#X msg 21 88 1;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 4 2 7 0;
+#X connect 4 3 8 0;
+#X connect 4 4 9 0;
+#X connect 4 5 10 0;
+#X connect 4 6 11 0;
+#X connect 4 7 12 0;
+#X connect 5 0 23 0;
+#X connect 6 0 23 0;
+#X connect 7 0 23 0;
+#X connect 8 0 23 0;
+#X connect 9 0 23 0;
+#X connect 10 0 23 0;
+#X connect 11 0 23 0;
+#X connect 12 0 23 0;
+#X connect 13 0 12 1;
+#X connect 14 0 4 0;
+#X connect 14 0 15 0;
+#X connect 16 0 11 1;
+#X connect 17 0 10 1;
+#X connect 18 0 9 1;
+#X connect 19 0 8 1;
+#X connect 20 0 7 1;
+#X connect 21 0 6 1;
+#X connect 22 0 5 1;
+#X connect 23 0 24 0;
+#X connect 25 0 32 0;
+#X connect 26 0 28 0;
+#X connect 26 1 29 0;
+#X connect 26 2 30 0;
+#X connect 26 3 31 0;
+#X connect 28 0 1 0;
+#X connect 29 0 1 0;
+#X connect 30 0 1 0;
+#X connect 31 0 1 0;
+#X connect 32 0 26 0;
+#X coords 0 -1 1 1 320 35 2 100 100;
