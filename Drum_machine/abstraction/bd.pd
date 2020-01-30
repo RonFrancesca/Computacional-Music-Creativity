@@ -6,7 +6,7 @@
 #X obj 20 475 soundfiler;
 #X floatatom 20 508 0 0 0 0 - - -;
 #X obj 97 509 print;
-#X obj 621 108 select 0 1 2 3 4 5 6 7;
+#X obj 674 104 select 0 1 2 3 4 5 6 7;
 #X obj 490 314 spigot;
 #X obj 558 308 spigot;
 #X obj 619 314 spigot;
@@ -17,8 +17,8 @@
 #X obj 987 313 spigot;
 #X obj 384 106 tgl 23 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
 1;
-#X obj 619 54 r step;
-#X floatatom 655 77 5 0 0 0 - - -;
+#X obj 672 50 r step;
+#X floatatom 708 73 5 0 0 0 - - -;
 #X obj 354 106 tgl 23 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
 1;
 #X obj 324 106 tgl 23 0 empty empty empty 17 7 0 10 -204800 -1 -1 0
@@ -43,17 +43,6 @@
 #X msg 49 361 read -resize ../909-samples/bd02.wav bd;
 #X msg 73 386 read -resize ../909-samples/bd03.wav bd;
 #X msg 15 28 1;
-#X text 825 26 This explanation is valid fo each instrument because
-they are all the same. For each instrument \, the only things that
-are going to chnage are the arrays names and the file names. The instrument
-receive a step from the sequencer object and according to the values
-received is going to trigger a different spigot.;
-#X text 878 159 The spigot object is going to execute a kind of and-to-and
-between the toggle selected from the canvas and the value coming from
-the step sequencer. If the and-to-and is True \, the it's going to
-read the concent of the array (our file) and send the signal to its
-gain in order to be played.;
-#X text 265 469 comment;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
 #X connect 4 0 5 0;

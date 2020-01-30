@@ -1,0 +1,17 @@
+#N canvas 138 90 1316 868 12;
+#X declare -path ./abstraction;
+#X obj 211 119 tgl 23 0 seq_bang empty Start/Stop -90 12 0 13 -191407
+-1 -1 0 1;
+#X obj 999 52 declare -path ./abstraction;
+#X obj 474 159 bpm_to_s;
+#X obj 117 169 sequencer;
+#X text 403 75 Object sequencer with 8 steps;
+#X text 181 73 Start and stop button;
+#X text 766 181 This object (bpm_to_ms) converts the bpm to ms.;
+#X obj 117 229 instrument;
+#X obj 117 293 instrument;
+#X obj 114 426 instrument;
+#X obj 114 358 instrument;
+#X obj 566 189 mixer;
+#X text 577 161 Master Volume;
+#X coords 0 -1 1 1 650 450 2 100 100;

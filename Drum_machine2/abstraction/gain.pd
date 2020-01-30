@@ -1,0 +1,28 @@
+#N canvas 508 228 827 591 12;
+#X floatatom 139 189 5 0 0 0 - - -;
+#X obj 105 278 vline~;
+#X obj 103 154 dbtorms;
+#X obj 15 298 *~;
+#X obj 14 184 inlet~;
+#X obj 15 332 outlet~;
+#X obj 103 9 loadbang;
+#X msg 105 232 \$1 60;
+#X msg 103 36 90;
+#X obj 1031 425 print;
+#X obj 1031 402 receive my-name;
+#X obj 1041 435 print;
+#X obj 1041 412 receive my-name;
+#X obj 107 103 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -128992
+-1 -1 11430 1;
+#X connect 1 0 3 1;
+#X connect 2 0 0 0;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 6 0 8 0;
+#X connect 7 0 1 0;
+#X connect 8 0 13 0;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 2 0;
+#X coords 0 -1 1 1 150 20 2 100 100;

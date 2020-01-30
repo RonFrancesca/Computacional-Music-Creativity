@@ -62,6 +62,7 @@ between 0 and 1 \, where 0 corresponds to 0 dB and 1 to 100 dB.;
 #X obj 133 131 s pitch_v_c;
 #X obj 222 107 s amp_c;
 #X obj 304 130 s amp_v_c;
+#X text 40 221 Controller for MIDI;
 #X connect 0 0 4 0;
 #X connect 0 0 10 0;
 #X connect 1 0 5 0;

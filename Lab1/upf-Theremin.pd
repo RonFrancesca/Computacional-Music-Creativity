@@ -2,12 +2,12 @@
 #X obj 369 792 *~;
 #X obj 367 854 dac~;
 #X obj 804 399 vsl 15 128 0 100 0 0 empty empty Amplitude 0 -9 0 10
--228856 -1 -1 1000 1;
+-228856 -1 -1 0 1;
 #X floatatom 840 539 5 0 0 0 - - -;
 #X floatatom 840 621 5 0 0 0 - - -;
 #X obj 803 768 vline~;
 #X obj 371 60 hsl 128 15 21 108 0 0 empty empty Pitch -2 -8 0 10 -228856
--1 -1 5800 1;
+-1 -1 0 1;
 #X floatatom 384 91 5 0 0 0 - - -;
 #X obj 367 736 osc~;
 #X obj 365 680 mtof~;
@@ -15,48 +15,33 @@
 #X obj 665 385 *~;
 #X obj 366 506 +~;
 #X obj 705 225 vsl 15 128 0 2 0 0 empty empty Vibrato_amplitude 0 -9
-0 10 -262130 -1 -1 1300 1;
+0 10 -262130 -1 -1 0 1;
 #X obj 476 145 hsl 128 15 0 10 0 0 empty empty Vibrato_frequency -2
--8 0 10 -262130 -1 -1 1800 1;
+-8 0 10 -262130 -1 -1 0 1;
 #X obj 476 440 *~;
-#X obj 475 273 expr if($f1 == 0 \, 0 \, 1);
-#X text 859 429 Amplitude of the theremin (usually left hand);
+#X text 859 442 Amplitude of the theremin (usually left hand);
 #X text 578 107 Vibrato control.;
 #X text 527 66 Pitch of the theremin (usually right hand);
 #X obj 804 586 dbtorms;
-#X text 896 534 Root mean square values (rms) \, are logarithmic values
-between 0 and 1 \, where 0 corresponds to 0 dB and 1 to 100 dB. For
-this reason \, I have the vertical slider for the amplitude going from
-0 and 100 (representing the dB) \, which are converted to rms with
-the dbtorms object \, which output vary between 0 and 1;
-#X text 879 669 The vline generate linear ramp which level and timing
-are determined by message. In this case the level is value coming from
-the conversation from db to rms and the timing is 200ms.;
 #X msg 805 699 \$1 200;
-#X text 21 53 The pitch is limited between 21 and 108 \, which are
+#X text 13 115 The pitch is limited between 21 and 108 \, which are
 the range of MIDI keyboard. The value of the pitch is going to be modulated
 from the vibrato. It is easier to modulate the frequency before the
 mtof object \, especially because the semitone are fixed related to
 the pitch as MIDI. If it would have done afterwards \, for every single
 frequency it should have been calculated the interval of the -+ semitone.
 ;
-#X text 820 116 Vibrato: the vibrato is a modulation of the frequency.
+#X text 818 157 Vibrato: the vibrato is a modulation of the frequency.
 This is done applying an oscillator to the current value of the pitch.
 Doing it before the mtof object \, allow to keep the range fixed and
 valid for all the note \, otherwise it would have been necessary to
 reconsider the distance between tone every time. The frequency vary
 between 0 ansd 10 Hz and the amplitude 2 semitone. Those values have
-been selected for the results thye give to us. The expression if($f1
-== 0 \, 0 \, 1) has been added to avoid storing value from the vibrato
-aplitude when the frequency was = 0 In fact \, the oscillatior is moltiply
-on the cold index \, which means its values is going to be stored also
-if there is not freqyuency. In this way \, when there is no frequency
-on the vibrato control \, the expression set 0 (deleting the "storing"
-effect) and when there is a frequency it set 1;
+been selected for the results thye give to us.;
 #X connect 0 0 1 0;
 #X connect 0 0 1 1;
 #X connect 2 0 3 0;
-#X connect 2 0 20 0;
+#X connect 2 0 19 0;
 #X connect 5 0 0 1;
 #X connect 6 0 7 0;
 #X connect 6 0 12 0;
@@ -67,9 +52,7 @@ effect) and when there is a frequency it set 1;
 #X connect 12 0 9 0;
 #X connect 13 0 11 1;
 #X connect 14 0 10 0;
-#X connect 14 0 16 0;
 #X connect 15 0 12 1;
-#X connect 16 0 15 0;
-#X connect 20 0 4 0;
-#X connect 20 0 23 0;
-#X connect 23 0 5 0;
+#X connect 19 0 4 0;
+#X connect 19 0 20 0;
+#X connect 20 0 5 0;

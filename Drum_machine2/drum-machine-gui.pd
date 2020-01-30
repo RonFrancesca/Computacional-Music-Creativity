@@ -1,0 +1,2 @@
+#N canvas 299 101 796 503 12;
+#X obj 103 44 drum-machine;

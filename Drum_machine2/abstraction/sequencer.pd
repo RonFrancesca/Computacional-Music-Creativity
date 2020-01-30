@@ -1,4 +1,4 @@
-#N canvas 118 218 1196 730 12;
+#N canvas 110 204 1196 730 12;
 #X obj 504 152 + 1;
 #X obj 15 10 hradio 25 1 0 8 empty empty empty 0 -8 0 10 -258113 -1
 -66577 4;

@@ -7,21 +7,15 @@
 #X msg 464 370 0;
 #X text 583 247 Bang to add +1 to the counter;
 #X text 608 396 Inizialization of int with value 0;
-#X text 660 338 Counter Loop. The value coming out from the int object
+#X text 659 337 Counter Loop. The value coming out from the int object
 is going to be the hot value of the + operator \, to which at every
 bang \, +1 is going to be added (loop);
 #X text 675 514 Output value of the counter;
-#X obj 463 323 bng 15 250 50 0 empty empty Reset 17 7 0 10 -262144
--1 -66577;
 #X obj 561 515 print count;
-#X text 20 320 With this bang and the message 0 \, it is possible to
-resent the count to 0 The reset bang and its relative message is connected
-directly to the hot inlet so that the int object will be immediately
-reset to 0 when the reset bang is pressed;
+#X text 344 371 Reset message;
 #X connect 1 0 3 1;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 3 0 10 0;
+#X connect 3 0 9 0;
 #X connect 4 0 3 0;
-#X connect 9 0 4 0;

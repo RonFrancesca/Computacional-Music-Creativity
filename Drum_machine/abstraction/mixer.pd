@@ -28,19 +28,6 @@
 #X obj 669 307 pan;
 #X obj 751 48 catch~ hh_vol;
 #X obj 887 48 catch~ mt_vol;
-#X text 906 183 The mixer is going to take as inout all the different
-signals \, giving them as input to gain and pan in order to be hanlded
-properly. As you will se \, the pan as two output \, one for the rigth
-channel and one for the left channel. Both are gonna be moltiply for
-the master volume \, which input is a sign 1 in order to keep working
-always.;
-#X text 845 545 I agree that the right and left channel could have
-been treated differently \, for example splitting the signal already
-inside the instrument. I did not want to do it because I believe it
-is better to create different patch for different function and also
-ebcasue I migth need this patch in the future so it would be easier
-to re-use the patch.;
-#X text 857 405 comment;
 #X connect 0 0 6 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 1;

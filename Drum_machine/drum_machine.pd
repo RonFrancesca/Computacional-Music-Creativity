@@ -1,42 +1,26 @@
 #N canvas 221 113 1336 747 12;
 #X declare -path ./abstraction;
-#X obj 109 27 tgl 23 0 seq_bang empty Start/Stop -90 12 0 13 -191407
+#X obj 192 89 tgl 23 0 seq_bang empty Start/Stop -90 12 0 13 -191407
 -1 -1 0 1;
-#X obj 163 322 mixer;
-#X obj 919 29 declare -path ./abstraction;
-#X obj 555 181 bpm_to_s;
-#X obj 552 258 sequencer;
-#X obj 164 202 lt;
-#X obj 165 278 ht;
-#X obj 164 131 oh;
-#X obj 164 167 hh;
-#X obj 165 238 mt;
-#X text 210 345 bd;
-#X text 289 346 sn;
-#X text 365 345 cp;
-#X text 445 344 oh;
-#X text 522 344 hh;
-#X text 599 345 lt;
-#X text 669 343 mt;
-#X text 735 345 ht;
-#X text 854 345 Master Volume;
-#X obj 164 94 cp;
-#X obj 164 21 bd;
-#X obj 164 57 sn;
-#X text 648 196 This object (bpm_to_ms) convert the bpm to ms.;
-#X text 912 69 Here my drum machine! First of all \, I delcrae the
-path were the abstraction are. It could have been nicer to create a
-canvas again here and take the object delcare out of the canvas and
-create another patch again but it is not necessary I guess. All object
-have a small description. If you open each of them \, detailed info
-are explained.;
-#X text 909 272 Object sequencer with 8 steps;
-#X text 189 592 The mixer object handle the gain for each instrument
-and also the pan for each of them. I also have a Master volume to mix
-all the gain from the different instruments.;
-#X text 503 20 Each row represent a different instrument in the drum.
-I tried to be as more complete as possible in terms of drum kit. By
-the way \, each instrumts work the same way. The number on the right
-of each instrumet is explained inside the patch \, basically the idea
-was to give the user the possibility to select a different file.;
-#X text 4 65 Start and stop button;
+#X obj 141 442 mixer;
+#X obj 1062 33 declare -path ./abstraction;
+#X obj 490 137 bpm_to_s;
+#X obj 230 72 sequencer;
+#X obj 147 309 lt;
+#X obj 148 385 ht;
+#X obj 147 238 oh;
+#X obj 147 274 hh;
+#X obj 148 345 mt;
+#X text 188 465 bd;
+#X text 267 466 sn;
+#X text 343 465 cp;
+#X text 425 456 oh;
+#X text 502 456 hh;
+#X text 579 457 lt;
+#X text 649 455 mt;
+#X text 715 457 ht;
+#X text 834 457 Master Volume;
+#X obj 147 201 cp;
+#X obj 147 128 bd;
+#X obj 147 164 sn;
+#X text 987 67 Declare the path were the abstractions are.;
