@@ -8,8 +8,8 @@ The content of every folder and file is described in this file.
 
 ### Lab 1
 
-### Drum machine 2 
+### Drum_machine 
 
-### Drum machine
+### Drum_machine2
 
-### Theremin 
+### Theremin_gui 
