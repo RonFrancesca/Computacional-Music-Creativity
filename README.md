@@ -6,10 +6,10 @@ The repository has been created also as a collection of solutions to different a
 
 The content of every folder and file is described in this file. 
 
-### Lab 1
+### Lab1
 
 ### Drum_machine 
 
 ### Drum_machine2
 
-### Theremin_gui 
+### Theremin-gui 
