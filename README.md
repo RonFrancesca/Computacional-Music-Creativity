@@ -8,6 +8,11 @@ The content of every folder and file is described in this file.
 
 ### Lab1
 
+Introuduction to Pure Data. The folder contains three patches:
+-  
+- 
+- 
+
 ### Drum_machine 
 
 ### Drum_machine2
