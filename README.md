@@ -16,6 +16,13 @@ Oscillator with vibrato control, version with a gui and MIDI object. Frequency a
 
 ### Drum_machine 
 
+Drum machine with 8 instruments, independent gain and independent pan for each of them, master volume. 
+Version with gui. 
+
 ### Drum_machine2
+
+Drum machine with n instruments, independent gain and independent pan for each of them, master volume. 
+This version is an abstract version of the previous one. The user can also select the file to play a run time. 
+Version with gui. 
 
 
