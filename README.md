@@ -40,7 +40,7 @@ In order to use all the patches correctly, you should install the following libr
 - Cyclone
 - timbreID
 
-How to install external in Pure Data open Pure Data -> Help -> Find external, look for the external you want to install. 
+To install external in Pure Data: Help -> Find external, look for the external you want to install. 
 
 ## Testing the code
 In order to test the code download or copy the repository and open the patch you want to try. 
