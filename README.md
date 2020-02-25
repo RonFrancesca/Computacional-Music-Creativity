@@ -11,21 +11,21 @@ The content of every folder and file is described in this file.
 -  upf-sequencer.pd: 16-step sequencer in pure data
 -  upf-Theremin.pd: oscillator with vibrato control. Both the frequency and the amplitude of the vibrato can be controlled by sliders. 
 
-### Theremin-gui: 
+#### Theremin-gui: 
 Oscillator with vibrato control, version with a gui and MIDI object. Frequency and amplitude of both oscillator and vibrato can be controlled by MIDI object (MIDI controller) or by the sliders from the Theremin-GUI.
 
-### Drum_machine 
+#### Drum_machine 
 
 Drum machine with 8 instruments, independent gain and independent pan for each of them, master volume. 
 Version with gui. 
 
-### Drum_machine2
+#### Drum_machine2
 
 Drum machine with n instruments, independent gain and independent pan for each of them, master volume. 
 This version is an abstract version of the previous one. The user can also select the file to play a run time. 
 Version with gui. 
 
-### Synthetizer 
+#### Synthetizer 
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
