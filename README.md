@@ -6,7 +6,7 @@ The repository has been created also as a collection of solutions to different a
 
 The content of every folder and file is described in this file. 
 
-### Lab1: Introuduction to Pure Data. The folder contains three patches:
+#### Lab1: Introuduction to Pure Data. The folder contains three patches:
 -  upf-counter.pd: simple counter in pure data 
 -  upf-sequencer.pd: 16-step sequencer in pure data
 -  upf-Theremin.pd: oscillator with vibrato control. Both the frequency and the amplitude of the vibrato can be controlled by sliders. 
