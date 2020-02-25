@@ -31,7 +31,7 @@ Version with gui.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
-In order to run the code you need to install the pure data: 
+In order to run the code you need to install the Pure Data: 
 https://puredata.info/downloads
 
 In order to use all the patches correctly, you should install the following library: 
@@ -40,8 +40,9 @@ In order to use all the patches correctly, you should install the following libr
 - Cyclone
 - timbreID
 
+How to install external in Pure Data open Pure Data -> Help -> Find external, look for the external you want to install. 
 
 ## Testing the code
-In order to test the code download the folder or copy the repository and open the patch you want to try. 
+In order to test the code download or copy the repository and open the patch you want to try. 
 
 
