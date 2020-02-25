@@ -34,3 +34,14 @@ These instructions will get you a copy of the project up and running on your loc
 In order to run the code you need to install the pure data: 
 https://puredata.info/downloads
 
+In order to use all the patches correctly, you should install the following library: 
+- Zexy
+- Ceammc
+- Cyclone
+- timbreID
+
+
+## Testing the code
+In order to test the code download the folder or copy the repository and open the patch you want to try. 
+
+
