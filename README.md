@@ -25,4 +25,12 @@ Drum machine with n instruments, independent gain and independent pan for each o
 This version is an abstract version of the previous one. The user can also select the file to play a run time. 
 Version with gui. 
 
+### Synthetizer 
+
+## Getting started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+In order to run the code you need to install the pure data: 
+https://puredata.info/downloads
 
